@@ -1,60 +1,50 @@
+import requests
+import html
+import random
+
+
 def trivia_fetch(num):
-  trivia = {
-    1: {
-      "number": num,
-      "pregunta": "¿Cuál es la capital de Francia?",
-      "respuesta": "paris"
-    },
-    2: {
-      "number": num,
-      "pregunta": "Cuál es la respuesta a la vida, el universo y todo?",
-      "respuesta": "42"
-    },
-    3: {
-      "number": num,
-      "pregunta": "¿Qué lenguaje estamos usando en este laboratorio?",
-      "respuesta": "python"
-    },
-    4: {
-      "number": num,
-      "pregunta": "¿Cuantos metros son 1 Km",
-      "respuesta": "1000"
-    }
-  }
-
-  return trivia.get(num, {
-    "number": num,
-    "pregunta": "Número de pregunta no disponible",
-    "respuesta": ""
-  })
-
+    url = f"https://opentdb.com/api.php?amount={num}"
+    response = requests.get(url)
+    trivia = response.json()
+    return trivia
 
 
 def main():
-    nombre = input("Ingresa tu nombre: ")
-    print("Hola,", nombre, "! Empecemos la trivia")
+    nombre = input("¡Bienvenido al juego de trivia! ¿Cuál es tu nombre? ")
+    cantidad = int(input("¿Cuántas preguntas quieres? "))
+    trivia = trivia_fetch(cantidad)
 
     puntaje = 0
+    numero_pregunta = 1
 
-    for numero in range(1, 5):
-      
-      trivia = trivia_fetch(numero)
+    for pregunta in trivia["results"]:
+        texto_pregunta = html.unescape(pregunta["question"])
+        respuesta_correcta = html.unescape(pregunta["correct_answer"])
 
-      print("\nPregunta", numero)
-      print(trivia["pregunta"])
+        opciones = [html.unescape(op) for op in pregunta["incorrect_answers"]]
+        opciones.append(respuesta_correcta)
+        random.shuffle(opciones)
 
-      respuesta_usuario = input("Tu respuesta: ").lower()
+        print(f"\nPregunta {numero_pregunta}: {texto_pregunta}")
 
-      if respuesta_usuario == trivia["respuesta"]:
-        print("¡Correcto!")
-        puntaje += 1
-      else:
-        print("Incorrecto.")
-        print("La respuesta correcta era:", trivia["respuesta"])
-        
-    print("\nTrivia terminada")
-    print(f"Felicidades {nombre}! Tu puntaje fue: {puntaje} de 4")
+        for i, opcion in enumerate(opciones, start=1):
+            print(f"{i}. {opcion}")
+
+        respuesta_usuario = int(input("Elige una opción: "))
+        opcion_elegida = opciones[respuesta_usuario - 1]
+
+        if opcion_elegida == respuesta_correcta:
+            print("✅ ¡Correcto!")
+            puntaje += 1
+        else:
+            print("❌ Incorrecto.")
+            print(f"La respuesta correcta era: {respuesta_correcta}")
+
+        numero_pregunta += 1
+
+    print(f"\n Felicidades {nombre}! Tu puntaje final es: {puntaje}/{cantidad}")
 
 
-if __name__=="__main__":
-  main()
+if __name__ == "__main__":
+    main()
