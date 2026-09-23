@@ -9,26 +9,29 @@ let resultados = [];
 
 for (let i = 1; i <= 105; i++) {
 
-  if (i % 15 === 0) {
-    resultados.push("FizzBuzz");
+  let resultado = "";
 
-  } else if (i % 3 === 0) {
-    resultados.push("Fizz");
+  if (i % 3 === 0) {
+    resultado += "Fizz";
+  }
 
-  } else if (i % 5 === 0) {
-    resultados.push("Buzz");
+  if (i % 5 === 0) {
+    resultado += "Buzz";
+  }
 
-  } else if (i % 7 === 0) {
-    resultados.push("Woof");
+  if (i % 7 === 0) {
+    resultado += "Woof";
+  }
 
-  } else {
+  if (resultado === "") {
     resultados.push(i);
+  } else {
+    resultados.push(resultado);
   }
 }
 
-
 rl.question(
-  "Hola, qué deseas realizar?\n" +
+  "Hola, ¿qué deseas realizar?\n" +
   "1.- Imprimir una cantidad específica de líneas\n" +
   "2.- Imprimir una línea en específico\n" +
   "Opción: ",
@@ -38,7 +41,7 @@ rl.question(
     if (opc === "1") {
 
       rl.question(
-        "Cuántas líneas deseas imprimir?: ",
+        "¿Cuántas líneas deseas imprimir?: ",
 
         (cantidad) => {
 
@@ -61,16 +64,14 @@ rl.question(
     } else if (opc === "2") {
 
       rl.question(
-        "Qué línea deseas imprimir?: ",
+        "¿Qué línea deseas imprimir?: ",
 
         (linea) => {
 
           linea = Number(linea);
 
           if (linea >= 1 && linea <= resultados.length) {
-
             console.log(resultados[linea - 1]);
-
           } else {
             console.log("Número de línea no válido.");
           }

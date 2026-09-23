@@ -1,8 +1,8 @@
-for (let i = 0; i < 106; i++) {
+for (let i = 1; i <= 105; i++) {
 
-    if(i % 3 == 0){
-      console.log("Fizz")
+    if (i % 3 === 0) {
+        console.log("Fizz");
     } else {
-      console.log(i)
+        console.log(i);
     }
-  };
+}

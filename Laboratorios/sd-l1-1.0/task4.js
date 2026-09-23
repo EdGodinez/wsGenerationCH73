@@ -1,4 +1,4 @@
-for (let i = 1; i <= 106; i++) {
+for (let i = 1; i <= 105; i++) {
 
     let resultado = "";
 
