@@ -29,7 +29,7 @@ class Car{
             return "Este auto es electrico";
         } 
 
-        return "Este auto es de combustión";
+        return "Este auto No es electrico";
     }
 }
 
@@ -43,7 +43,7 @@ const tipoMotor = process.argv[9];
 
 const car1 = new Car(marca, modelo, anio, color, puertas, kilometraje, tipoMotor);
 
-console.log(car1.infoCar())
+console.log(car1.infoCar());
 console.log(car1.infoMotor());
 
 // Type your code above this line!
