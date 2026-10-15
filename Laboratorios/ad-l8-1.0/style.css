@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+:root {
+  --color-primary: #4C8BF5;
+  --color-background: #17191F;
+  --color-surface: #252830;
+  --color-text: #F5F5F5;
+  --color-muted: #A9AFBC;
+}
+
+
+
+/* Estilos globales */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Google Sans", Arial, sans-serif;
+}
+
+/* Personalización de Bootstrap */
+.btn-primary {
+  --bs-btn-bg: #4C8BF5;
+  --bs-btn-border-color: #4C8BF5;
+  --bs-btn-hover-bg: #3978E2;
+  --bs-btn-hover-border-color: #3978E2;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-surface);
+}
+
+.navbar-brand {
+  color: var(--color-text);
+}
+
+.navbar-brand:hover {
+  color: var(--color-text);
+}
+
+.navbar .nav-link {
+  color: var(--color-muted);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--color-primary);
+}
+
+
+/* Columnas laterales */
+.sidebar {
+  background-color: var(--color-surface);
+  min-height: 350px;
+}
+
+/* Contenido principal */
+.main-content {
+  background-color: var(--color-surface);
+  min-height: 350px;
+}
+
+
+/* Tarjetas musicales */
+.card {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 1px solid var(--color-muted);
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: var(--color-primary);
+}
+
+.card-text {
+  color: var(--color-muted);
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: var(--color-surface);
+  color: var(--color-muted);
+}
+
+.footer h2 {
+  color: var(--color-text);
+}
+
+.footer-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

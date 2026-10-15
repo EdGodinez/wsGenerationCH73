@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Music blog | Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="dark">
+        <div class="container">
+
+            <!-- Nombre del blog -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                Music <span class="text-primary">Blog</span>
+            </a>
+
+            <!-- Botón para dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Mostrar menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">
+                            Contacto
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Contenido principal -->
+    <main class="container my-5">
+        <div class="row g-4">
+
+            <!-- Columna izquierda: publicidad -->
+            <aside class="col-12 col-lg-2">
+                <div class="sidebar h-100 p-3 rounded-3">
+                    <h2 class="h6 text-primary">Publicidad</h2>
+                    <p class="small text-secondary">
+                        Espacio reservado para futuros anuncios.
+                    </p>
+                </div>
+            </aside>
+
+            <!-- Columna contenido -->
+
+
+            <!-- Columna central: Contacto -->
+            <section class="col-12 col-lg-8">
+                <div class="main-content p-4 rounded-3">
+
+                    <h1 class="fw-bold mb-3">
+                        Contáctanos
+                    </h1>
+
+                    <p class="lead text-secondary">
+                        ¿Tienes alguna pregunta o sugerencia?
+                        Nos encantaría conocer tu opinión.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <!-- Alerta dinámica -->
+                    <div id="alertContainer" aria-live="polite"></div>
+
+                    <!-- Formulario de contacto -->
+                    <form id="contactForm">
+
+                        <!-- Correo electrónico -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Correo electrónico
+                            </label>
+
+                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com"
+                                required>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="mb-4">
+                            <label for="message" class="form-label">
+                                Mensaje
+                            </label>
+
+                            <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje..."
+                                required></textarea>
+                        </div>
+
+                        <!-- Botón -->
+                        <button type="submit" class="btn btn-primary">
+                            Enviar mensaje
+                        </button>
+
+                    </form>
+
+                </div>
+            </section>
+
+
+
+            <!-- Columna noticias -->
+            <aside class="col-12 col-lg-2">
+                <div class="sidebar h-100 p-3 rounded-3">
+                    <h2 class="h6 text-primary">Noticias</h2>
+                    <p class="small text-secondary">
+                        Próximamente encontrarás novedades
+                        del mundo musical.
+                    </p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer border-top py-4 mt-5" data-bs-theme="dark">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Columna 1: Blog -->
+                <div class="col-12 col-md-4">
+                    <h2 class="h5 fw-bold">
+                        Music <span class="text-primary">Blog</span>
+                    </h2>
+                    <p class="small">
+                        Un espacio para descubrir, explorar y
+                        compartir nuestra pasión por la música.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Equipo -->
+                <div class="col-12 col-md-4">
+                    <h2 class="h5 fw-bold">Nuestro equipo</h2>
+                    <p class="small mb-0">
+                        Eduardo Godínez<br>
+                        Equipo de desarrollo
+                    </p>
+                </div>
+
+                <!-- Columna 3: Contacto -->
+                <div class="col-12 col-md-4">
+                    <h2 class="h5 fw-bold">Contacto</h2>
+                    <a href="mailto:eduardo@godinez.com" class="footer-link small">
+                        eduardo@godinez.com
+                    </a>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <p class="text-center small mb-0">
+                &copy; 2026 Music Blog.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
