@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-fondo: #ffffff;
+  --color-titulos: #374151;
+  --color-texto: #6b7280;
+  --color-secundario: #9ca3af;
+
+  --fuente-principal: "Google Sans", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-principal);
+}
+
+h2 {
+  color: var(--color-titulos);
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-texto);
+  line-height: 1.6;
+}
