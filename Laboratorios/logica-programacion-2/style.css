@@ -1,0 +1,98 @@
+/* Estilos generales */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f5f9;
+    color: #202124;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.contenedor {
+    background-color: white;
+    width: 400px;
+    max-width: 85%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos */
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* Párrafos */
+p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Formulario */
+form {
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Campo de entrada */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #202124;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #202124;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+button:hover {
+    background-color: #3c4043;
+}
+
+/* Resultados */
+.resultados {
+    margin-top: 25px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 15px;
+}
+
+.resultados p {
+    background-color: #f8fafc;
+    color: #202124;
+    padding: 15px;
+    border-radius: 8px;
+}
